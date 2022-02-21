@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {  Route, Routes } from "react-router-dom";
+import FeeRecipt from './components/Admin/FeeRecipt';
+import FeeRecipt2 from './components/Admin/FeeRecipt2';
+import StudentFee from './components/Student/StudentFee';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="overflow-hidden">
+      <Routes>
+        <Route path="/" element={<FeeRecipt />} />
+        <Route path="/page2" element={<FeeRecipt2/>} />
+        <Route path="/student" element={<StudentFee/>} />
+      </Routes>
     </div>
   );
 }
